@@ -1,0 +1,97 @@
+enum QuestionTypeCode {
+  MCQ,
+  TRUE_FALSE,
+  SHORT_ANSWER
+}
+
+enum ReminderKind {
+  WEEK_1,
+  WEEK_3,
+  MONTH_3
+}
+
+enum ReminderStatus {
+  PENDING,
+  DONE,
+  SKIPPED
+}
+
+entity Subject {
+  name String required unique minlength(2) maxlength(80)
+  description TextBlob maxlength(2000)
+}
+
+entity QuestionType {
+  code QuestionTypeCode required unique
+  label String required unique minlength(2) maxlength(50)
+}
+
+entity Question {
+  prompt TextBlob required maxlength(5000)
+  difficulty Integer required min(1) max(5)
+  explanation TextBlob maxlength(5000)
+  active Boolean required
+
+  // MCQ only (validated server-side)
+  choiceA String maxlength(500)
+  choiceB String maxlength(500)
+  choiceC String maxlength(500)
+  choiceD String maxlength(500)
+  // store "A"|"B"|"C"|"D"
+  correctChoice String pattern(/^[ABCD]$/)
+
+  // SHORT_ANSWER only (validated server-side)
+  correctText TextBlob maxlength(2000)
+}
+
+entity Answer {
+  answeredAt Instant required
+  isCorrect Boolean required
+  timeSpentMs Long min(0)
+
+  // 0 = hard / 1 = ok / 2 = easy (à expliquer à l’oral)
+  selfReportedRecall Integer required min(0) max(2)
+
+  // snapshot pour garder l’historique même si Question.difficulty change
+  difficultyAtAnswer Integer required min(1) max(5)
+
+  // MCQ / TRUE_FALSE
+  selectedChoice String pattern(/^[ABCD]$/)
+
+  // SHORT_ANSWER
+  freeTextAnswer TextBlob maxlength(2000)
+}
+
+entity ReviewReminder {
+  dueAt Instant required
+  status ReminderStatus required
+  kind ReminderKind required
+  createdAt Instant required
+  doneAt Instant
+}
+
+entity UserStats {
+  currentDifficulty Integer required min(1) max(5)
+  totalAnswered Integer required min(0)
+  totalCorrect Integer required min(0)
+  streakDays Integer required min(0)
+  lastActiveAt Instant
+}
+
+relationship ManyToOne {
+  Question{subject(name)} to Subject
+  Question{type(label)} to QuestionType
+
+  Answer{user(login)} to User
+  Answer{question(prompt)} to Question
+
+  ReviewReminder{user(login)} to User
+  ReviewReminder{question(prompt)} to Question
+
+  UserStats{user(login)} to User
+  UserStats{subject(name)} to Subject
+}
+
+service all with serviceClass
+dto all with mapstruct
+paginate Question, Answer, ReviewReminder with pagination
