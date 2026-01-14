@@ -18,7 +18,7 @@ enum ReminderStatus {
 
 entity Subject {
   name String required unique minlength(2) maxlength(80)
-  description TextBlob maxlength(2000)
+  description TextBlob
 }
 
 entity QuestionType {
@@ -27,21 +27,18 @@ entity QuestionType {
 }
 
 entity Question {
-  prompt TextBlob required maxlength(5000)
+  prompt TextBlob required
   difficulty Integer required min(1) max(5)
-  explanation TextBlob maxlength(5000)
+  explanation TextBlob
   active Boolean required
 
-  // MCQ only (validated server-side)
   choiceA String maxlength(500)
   choiceB String maxlength(500)
   choiceC String maxlength(500)
   choiceD String maxlength(500)
-  // store "A"|"B"|"C"|"D"
   correctChoice String pattern(/^[ABCD]$/)
 
-  // SHORT_ANSWER only (validated server-side)
-  correctText TextBlob maxlength(2000)
+  correctText TextBlob
 }
 
 entity Answer {
@@ -49,17 +46,11 @@ entity Answer {
   isCorrect Boolean required
   timeSpentMs Long min(0)
 
-  // 0 = hard / 1 = ok / 2 = easy (à expliquer à l’oral)
   selfReportedRecall Integer required min(0) max(2)
-
-  // snapshot pour garder l’historique même si Question.difficulty change
   difficultyAtAnswer Integer required min(1) max(5)
 
-  // MCQ / TRUE_FALSE
   selectedChoice String pattern(/^[ABCD]$/)
-
-  // SHORT_ANSWER
-  freeTextAnswer TextBlob maxlength(2000)
+  freeTextAnswer TextBlob
 }
 
 entity ReviewReminder {
@@ -82,16 +73,20 @@ relationship ManyToOne {
   Question{subject(name)} to Subject
   Question{type(label)} to QuestionType
 
-  Answer{user(login)} to User
+  Answer{user(login)} to User with builtInEntity
   Answer{question(prompt)} to Question
 
-  ReviewReminder{user(login)} to User
+  ReviewReminder{user(login)} to User with builtInEntity
   ReviewReminder{question(prompt)} to Question
 
-  UserStats{user(login)} to User
+  UserStats{user(login)} to User with builtInEntity
   UserStats{subject(name)} to Subject
 }
 
 service all with serviceClass
 dto all with mapstruct
+
 paginate Question, Answer, ReviewReminder with pagination
+
+
+

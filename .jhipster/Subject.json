@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20260113210725"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "80",
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "TextBlob"
+    }
+  ],
+  "name": "Subject",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

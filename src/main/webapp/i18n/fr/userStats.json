@@ -1,0 +1,30 @@
+{
+  "adaptiveQuizzApp": {
+    "userStats": {
+      "home": {
+        "title": "UserStats",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau User Stats",
+        "createOrEditLabel": "Créer ou éditer un User Stats",
+        "notFound": "Aucun User Stats trouvé"
+      },
+      "created": "Un nouveau User Stats a été créé avec l'identifiant {{ param }}",
+      "updated": "Le User Stats avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le User Stats avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le User Stats {{ id }} ?"
+      },
+      "detail": {
+        "title": "User Stats"
+      },
+      "id": "ID",
+      "currentDifficulty": "Current Difficulty",
+      "totalAnswered": "Total Answered",
+      "totalCorrect": "Total Correct",
+      "streakDays": "Streak Days",
+      "lastActiveAt": "Last Active At",
+      "user": "User",
+      "subject": "Subject"
+    }
+  }
+}

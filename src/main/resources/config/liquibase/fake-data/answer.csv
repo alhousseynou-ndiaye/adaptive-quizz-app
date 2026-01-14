@@ -1,0 +1,11 @@
+id;answered_at;is_correct;time_spent_ms;self_reported_recall;difficulty_at_answer;selected_choice;free_text_answer
+1;2026-01-13T01:54:09;false;26405;2;5;"D";../fake-data/blob/hipster.txt
+2;2026-01-13T02:29:08;true;21354;1;3;"D";../fake-data/blob/hipster.txt
+3;2026-01-13T00:01:08;false;6121;2;4;"C";../fake-data/blob/hipster.txt
+4;2026-01-13T05:54:05;true;18330;0;5;"B";../fake-data/blob/hipster.txt
+5;2026-01-13T15:25:45;true;2056;1;1;"C";../fake-data/blob/hipster.txt
+6;2026-01-13T19:33:43;false;15013;0;4;"C";../fake-data/blob/hipster.txt
+7;2026-01-13T13:35:25;true;29554;2;1;"B";../fake-data/blob/hipster.txt
+8;2026-01-13T08:03:12;false;25073;0;4;"A";../fake-data/blob/hipster.txt
+9;2026-01-13T05:06:28;true;14070;0;1;"C";../fake-data/blob/hipster.txt
+10;2026-01-13T02:37:19;false;17725;0;2;"B";../fake-data/blob/hipster.txt

@@ -1,0 +1,10 @@
+{
+  "adaptiveQuizzApp": {
+    "ReminderStatus": {
+      "null": "",
+      "PENDING": "PENDING",
+      "DONE": "DONE",
+      "SKIPPED": "SKIPPED"
+    }
+  }
+}

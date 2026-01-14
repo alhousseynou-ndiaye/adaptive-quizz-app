@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20260113210726"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "QuestionTypeCode",
+      "fieldValidateRules": ["required", "unique"],
+      "fieldValues": "MCQ,TRUE_FALSE,SHORT_ANSWER"
+    },
+    {
+      "fieldName": "label",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "50",
+      "fieldValidateRulesMinlength": "2"
+    }
+  ],
+  "name": "QuestionType",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

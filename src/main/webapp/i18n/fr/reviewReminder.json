@@ -1,0 +1,30 @@
+{
+  "adaptiveQuizzApp": {
+    "reviewReminder": {
+      "home": {
+        "title": "ReviewReminders",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Review Reminder",
+        "createOrEditLabel": "Créer ou éditer un Review Reminder",
+        "notFound": "Aucun Review Reminder trouvé"
+      },
+      "created": "Un nouveau Review Reminder a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Review Reminder avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Review Reminder avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Review Reminder {{ id }} ?"
+      },
+      "detail": {
+        "title": "Review Reminder"
+      },
+      "id": "ID",
+      "dueAt": "Due At",
+      "status": "Status",
+      "kind": "Kind",
+      "createdAt": "Created At",
+      "doneAt": "Done At",
+      "user": "User",
+      "question": "Question"
+    }
+  }
+}

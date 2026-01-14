@@ -1,0 +1,11 @@
+id;prompt;difficulty;explanation;active;choice_a;choice_b;choice_c;choice_d;correct_choice;correct_text
+1;../fake-data/blob/hipster.txt;2;../fake-data/blob/hipster.txt;false;équipe;étant donné que innombrable candide;en bas de;près;"B";../fake-data/blob/hipster.txt
+2;../fake-data/blob/hipster.txt;3;../fake-data/blob/hipster.txt;false;biathlète rudement;aux environs de âcre;ha;juriste bien que en faveur de;"A";../fake-data/blob/hipster.txt
+3;../fake-data/blob/hipster.txt;5;../fake-data/blob/hipster.txt;true;en dépit de;coin-coin sans que sur;souvent atchoum;percer;"C";../fake-data/blob/hipster.txt
+4;../fake-data/blob/hipster.txt;2;../fake-data/blob/hipster.txt;false;avant oh porte-parole;aïe sans que équilibrer;de circulaire insérer;d’autant que;"A";../fake-data/blob/hipster.txt
+5;../fake-data/blob/hipster.txt;3;../fake-data/blob/hipster.txt;true;débile gestionnaire;cot cot pas mal outre;de manière à ce que;aux alentours de quitte à d’autant que;"B";../fake-data/blob/hipster.txt
+6;../fake-data/blob/hipster.txt;2;../fake-data/blob/hipster.txt;false;dring bien que cadre;cyan considérable;glouglou équipe délectable;au moyen de prestataire de services;"C";../fake-data/blob/hipster.txt
+7;../fake-data/blob/hipster.txt;1;../fake-data/blob/hipster.txt;false;tant coin-coin;sitôt que électorat réfléchir;avant de;parfois cuicui spécialiste;"A";../fake-data/blob/hipster.txt
+8;../fake-data/blob/hipster.txt;4;../fake-data/blob/hipster.txt;true;oups;atténuer sembler substituer;police jusqu’à ce que rudement;à partir de de;"A";../fake-data/blob/hipster.txt
+9;../fake-data/blob/hipster.txt;1;../fake-data/blob/hipster.txt;false;replacer;à l'entour de d’autant que;ainsi plic debout;chef de cuisine;"D";../fake-data/blob/hipster.txt
+10;../fake-data/blob/hipster.txt;1;../fake-data/blob/hipster.txt;true;du fait que responsable;à partir de considérable;circulaire tendre regretter;toc en dedans de;"C";../fake-data/blob/hipster.txt

@@ -1,0 +1,32 @@
+{
+  "adaptiveQuizzApp": {
+    "answer": {
+      "home": {
+        "title": "Answers",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Answer",
+        "createOrEditLabel": "Créer ou éditer un Answer",
+        "notFound": "Aucun Answer trouvé"
+      },
+      "created": "Un nouveau Answer a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Answer avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Answer avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Answer {{ id }} ?"
+      },
+      "detail": {
+        "title": "Answer"
+      },
+      "id": "ID",
+      "answeredAt": "Answered At",
+      "isCorrect": "Is Correct",
+      "timeSpentMs": "Time Spent Ms",
+      "selfReportedRecall": "Self Reported Recall",
+      "difficultyAtAnswer": "Difficulty At Answer",
+      "selectedChoice": "Selected Choice",
+      "freeTextAnswer": "Free Text Answer",
+      "user": "User",
+      "question": "Question"
+    }
+  }
+}
